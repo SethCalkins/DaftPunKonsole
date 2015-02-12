@@ -1,5 +1,5 @@
 # DaftPunKonsole
-A DaftPunk Soundboard for the song “Harder, Better, Faster, Stronger”
+A DaftPunk Soundboard for OS X featuring the song “Harder, Better, Faster, Stronger”
 
 This is based on Malik Dellidj's [#DaftPunKonsole][1].
 
