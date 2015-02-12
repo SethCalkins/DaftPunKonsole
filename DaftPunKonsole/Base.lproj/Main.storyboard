@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,20 +641,22 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="DaftPunKonsole" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="772" height="367"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="772" height="367"/>
+                        <value key="maxSize" type="size" width="772" height="367"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -662,20 +664,342 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="221" y="298.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="EPKeyCatcherView">
+                        <rect key="frame" x="0.0" y="0.0" width="730" height="402"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PvI-p7-eBB">
+                                <rect key="frame" x="310" y="307" width="110" height="108"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="DaftPunkLogo" id="Tsd-dR-sfR"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bda-jY-fI4">
+                                <rect key="frame" x="143" y="297" width="444" height="25"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Harder, Better, Faster, Stronger" id="FA2-8X-zDd">
+                                    <font key="font" size="21" name="HelveticaNeue-Thin"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRk-Lv-Lw3">
+                                <rect key="frame" x="54" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="Q" bezelStyle="texturedSquare" image="work it" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="M9u-vj-yUs">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="h4t-i3-HFZ"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="RWk-Dd-JR0">
+                                <rect key="frame" x="70" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="A" bezelStyle="texturedSquare" image="harder" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="dAU-Mr-Oeq">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="eNa-qE-QwO"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="qfd-7l-5Eh">
+                                <rect key="frame" x="133" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="S" bezelStyle="texturedSquare" image="better" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="upx-q2-0kA">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="yZk-ni-kHb"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="GQl-QC-QwL">
+                                <rect key="frame" x="196" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="D" bezelStyle="texturedSquare" image="faster" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="not-FX-SW1">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="T9Y-fR-d87"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="3Jt-8h-CPt">
+                                <rect key="frame" x="259" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="F" bezelStyle="texturedSquare" image="stronger" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="ght-ql-WM0">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="Ddx-5D-GOw"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kd6-J8-Ojw">
+                                <rect key="frame" x="117" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="W" bezelStyle="texturedSquare" image="make it" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="jkL-ST-tnE">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="1D4-To-lH0"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="dGQ-hb-KjZ">
+                                <rect key="frame" x="180" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="E" bezelStyle="texturedSquare" image="do it" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="BIC-4J-LtB">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="bvE-a6-nzA"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="O19-CY-54q">
+                                <rect key="frame" x="243" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="R" bezelStyle="texturedSquare" image="make us" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="e8g-IL-LQ2">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="azM-FH-glB"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="FCW-MP-BqB">
+                                <rect key="frame" x="432" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="U" bezelStyle="texturedSquare" image="more than" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="T5m-bl-4dD">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="lRf-II-21U"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="uDq-3w-gll">
+                                <rect key="frame" x="495" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="I" bezelStyle="texturedSquare" image="hour" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="osq-KY-56s">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="50Y-L1-E9N"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="juz-m3-UbD">
+                                <rect key="frame" x="558" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="O" bezelStyle="texturedSquare" image="our" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="zjX-Eb-2Ko">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="eB0-Oy-Rd2"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="rRj-JR-6oP">
+                                <rect key="frame" x="621" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="P" bezelStyle="texturedSquare" image="never" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="u7b-Ah-W4B">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="l7y-Vg-FFp"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="j0c-ga-qXf">
+                                <rect key="frame" x="448" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="J" bezelStyle="texturedSquare" image="ever" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="r0Q-Yf-33U">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="9DJ-K1-dSN"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="wP6-Yj-IqX">
+                                <rect key="frame" x="511" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="K" bezelStyle="texturedSquare" image="after" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="hDa-xM-BEq">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="Ttf-Ji-LS8"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="9WE-Lz-GSG">
+                                <rect key="frame" x="574" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="L" bezelStyle="texturedSquare" image="work is" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="g2N-uA-vjo">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="fL6-qZ-IcG"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="xBk-pM-F04">
+                                <rect key="frame" x="637" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title=";" bezelStyle="texturedSquare" image="over" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="R2W-f8-T8b">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="soundboardClick:" target="XfG-lQ-9wD" id="Upn-UN-IYN"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-tw-S6e">
+                                <rect key="frame" x="96" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="Z" bezelStyle="texturedSquare" image="NORMAL" imagePosition="below" alignment="center" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="TcV-zO-FX6">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="modifierClick:" target="XfG-lQ-9wD" id="2rL-Iz-zI3"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-d8-5U1">
+                                <rect key="frame" x="159" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="X" bezelStyle="texturedSquare" image="HIGH" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="eS8-0m-YLh">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="modifierClick:" target="XfG-lQ-9wD" id="OMr-c4-IVc"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nzn-0c-uWi">
+                                <rect key="frame" x="306" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="jNf-4I-J2J">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="kpB-PQ-cEs">
+                                <rect key="frame" x="369" y="235" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="Ut3-KW-Dj4">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-7S-9Oe">
+                                <rect key="frame" x="322" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="T5u-1H-zyM">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-NA-dWn">
+                                <rect key="frame" x="385" y="175" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="Win-Ho-QJQ">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fmp-Le-2d7">
+                                <rect key="frame" x="222" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="8jM-1c-fsi">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-pG-Oxr">
+                                <rect key="frame" x="285" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="5er-Hb-ovP">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-kE-kVq">
+                                <rect key="frame" x="348" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="KXA-yH-hb3">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="Thr-Qk-CWi">
+                                <rect key="frame" x="474" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="EH9-Lu-qrk">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="i7z-oZ-1DP">
+                                <rect key="frame" x="537" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="below" alignment="center" enabled="NO" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="Ct9-b3-7Q0">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="4Uu-7h-j6C">
+                                <rect key="frame" x="411" y="115" width="55" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="N" bezelStyle="texturedSquare" image="LOW" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyUpOrDown" inset="2" id="8mi-B3-xCj">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="modifierClick:" target="XfG-lQ-9wD" id="Yb2-Sx-rLO"/>
+                                </connections>
+                            </button>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="uJb-TY-3Jv">
+                                <rect key="frame" x="222" y="55" width="244" height="55"/>
+                                <buttonCell key="cell" type="squareTextured" title="Space" bezelStyle="texturedSquare" image="NSRightFacingTriangleTemplate" imagePosition="below" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="Zfa-WF-CiT">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="spaceClick:" target="XfG-lQ-9wD" id="vwu-kt-EEd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="ButtonA" destination="RWk-Dd-JR0" id="GO4-cW-S9y"/>
+                        <outlet property="ButtonD" destination="GQl-QC-QwL" id="rUC-kI-wRC"/>
+                        <outlet property="ButtonE" destination="dGQ-hb-KjZ" id="QuU-Bz-lwv"/>
+                        <outlet property="ButtonF" destination="3Jt-8h-CPt" id="hjH-lM-lkg"/>
+                        <outlet property="ButtonI" destination="uDq-3w-gll" id="EIr-Z7-B05"/>
+                        <outlet property="ButtonJ" destination="j0c-ga-qXf" id="RxR-Mi-aqG"/>
+                        <outlet property="ButtonK" destination="wP6-Yj-IqX" id="rN0-0E-mzd"/>
+                        <outlet property="ButtonL" destination="9WE-Lz-GSG" id="oCV-yS-9Te"/>
+                        <outlet property="ButtonN" destination="4Uu-7h-j6C" id="Rdd-7d-5QC"/>
+                        <outlet property="ButtonO" destination="juz-m3-UbD" id="m5B-9M-rsM"/>
+                        <outlet property="ButtonP" destination="rRj-JR-6oP" id="c6m-uR-icZ"/>
+                        <outlet property="ButtonQ" destination="hRk-Lv-Lw3" id="Hqb-dn-29E"/>
+                        <outlet property="ButtonR" destination="O19-CY-54q" id="jEt-o1-81p"/>
+                        <outlet property="ButtonS" destination="qfd-7l-5Eh" id="GLU-ER-um2"/>
+                        <outlet property="ButtonSemicolon" destination="xBk-pM-F04" id="zbc-sG-uaT"/>
+                        <outlet property="ButtonSpace" destination="uJb-TY-3Jv" id="2wb-Q4-Whe"/>
+                        <outlet property="ButtonU" destination="FCW-MP-BqB" id="yP5-6E-Zmg"/>
+                        <outlet property="ButtonW" destination="Kd6-J8-Ojw" id="IaV-hh-6mF"/>
+                        <outlet property="ButtonX" destination="cq8-d8-5U1" id="5tb-l9-ix8"/>
+                        <outlet property="ButtonZ" destination="tRq-tw-S6e" id="JBy-rA-xRs"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="273" y="864"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DaftPunkLogo" width="227" height="158"/>
+        <image name="HIGH" width="50" height="17"/>
+        <image name="LOW" width="50" height="17"/>
+        <image name="NORMAL" width="50" height="17"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
+        <image name="after" width="50" height="17"/>
+        <image name="better" width="50" height="17"/>
+        <image name="do it" width="50" height="17"/>
+        <image name="ever" width="50" height="17"/>
+        <image name="faster" width="50" height="17"/>
+        <image name="harder" width="50" height="17"/>
+        <image name="hour" width="50" height="17"/>
+        <image name="make it" width="50" height="17"/>
+        <image name="make us" width="50" height="17"/>
+        <image name="more than" width="50" height="17"/>
+        <image name="never" width="50" height="17"/>
+        <image name="our" width="50" height="17"/>
+        <image name="over" width="50" height="17"/>
+        <image name="stronger" width="50" height="17"/>
+        <image name="work is" width="50" height="17"/>
+        <image name="work it" width="50" height="17"/>
+    </resources>
 </document>
