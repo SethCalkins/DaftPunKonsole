@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B94E6D11A8C2BC400FC6228"
+               BlueprintIdentifier = "6BE666B01A8D428000E84577"
                BuildableName = "DaftPunKonsole.app"
                BlueprintName = "DaftPunKonsole"
                ReferencedContainer = "container:DaftPunKonsole.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B94E6E71A8C2BC400FC6228"
+               BlueprintIdentifier = "6BE666C31A8D428000E84577"
                BuildableName = "DaftPunKonsoleTests.xctest"
                BlueprintName = "DaftPunKonsoleTests"
                ReferencedContainer = "container:DaftPunKonsole.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B94E6E71A8C2BC400FC6228"
+               BlueprintIdentifier = "6BE666C31A8D428000E84577"
                BuildableName = "DaftPunKonsoleTests.xctest"
                BlueprintName = "DaftPunKonsoleTests"
                ReferencedContainer = "container:DaftPunKonsole.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B94E6D11A8C2BC400FC6228"
+            BlueprintIdentifier = "6BE666B01A8D428000E84577"
             BuildableName = "DaftPunKonsole.app"
             BlueprintName = "DaftPunKonsole"
             ReferencedContainer = "container:DaftPunKonsole.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B94E6D11A8C2BC400FC6228"
+            BlueprintIdentifier = "6BE666B01A8D428000E84577"
             BuildableName = "DaftPunKonsole.app"
             BlueprintName = "DaftPunKonsole"
             ReferencedContainer = "container:DaftPunKonsole.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B94E6D11A8C2BC400FC6228"
+            BlueprintIdentifier = "6BE666B01A8D428000E84577"
             BuildableName = "DaftPunKonsole.app"
             BlueprintName = "DaftPunKonsole"
             ReferencedContainer = "container:DaftPunKonsole.xcodeproj">

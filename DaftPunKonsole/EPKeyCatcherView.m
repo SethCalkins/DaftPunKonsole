@@ -21,4 +21,8 @@
     }
 }
 
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
+
 @end

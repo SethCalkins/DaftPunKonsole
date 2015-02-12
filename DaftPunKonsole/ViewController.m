@@ -41,9 +41,9 @@ NSString* createStringForKey(CGKeyCode keyCode) {
     return (__bridge NSString *)CFStringCreateWithCharacters(kCFAllocatorDefault, chars, 1);
 }
 
-- (void)viewDidLoad {
+- (void)awakeFromNib {
     [(EPKeyCatcherView *)self.view setKeyEventDelegate:self];
-    [super viewDidLoad];
+    [super awakeFromNib];
     
     // Init our players Array
     self.players = [NSMutableArray new];
